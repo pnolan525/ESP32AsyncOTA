@@ -20,4 +20,5 @@ void setup() {
 }
 
 void loop() {
+    // Nothing here, everything is handled by the web server
 }

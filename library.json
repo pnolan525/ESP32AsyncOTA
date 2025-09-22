@@ -9,11 +9,11 @@
   },
   "authors": [
     {
-      "name": "pnolan525",
+      "name": "IrishBoss",
       "maintainer": true      
     }
   ],
-  "license": "MIT",
+  "license": "GNU GPLv3",
   "frameworks": "arduino",
   "platforms": "espressif32",
   "dependencies": {

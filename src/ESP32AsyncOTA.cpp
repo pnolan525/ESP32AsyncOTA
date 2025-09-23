@@ -43,11 +43,9 @@ void ESP32AsyncOTA::handleUpdatePage(AsyncWebServerRequest *request) {
   request->send(200, "text/html", page);
 }
 
-void ESP32AsyncOTA::handleUpload(AsyncWebServerRequest *request,
-                                 const String &filename, size_t index,
-                                 uint8_t *data, size_t len, bool final) {
-  if (!index) {
-    bool isFs = filename.endsWith(".bin") && filename.indexOf("littlefs") >= 0;
+void ESP32AsyncOTA::handleUpload(AsyncWebServerRequest *request, const String &filename, size_t index, uint8_t *data, size_t len, bool final) {
+if (!index) {
+  	bool isFs = filename.endsWith(".bin") && filename.indexOf("littlefs") >= 0;
 #if HAS_LITTLEFS
     if (isFs) {
       if (!Update.begin(LittleFS.totalBytes(), U_SPIFFS)) {

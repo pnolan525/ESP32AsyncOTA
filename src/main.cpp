@@ -10,12 +10,12 @@ ESP32AsyncOTA ota(server);
 
 // Your AP credentials
 const char *ssid = "ESP32-OTA";
-const char *password = "12345678";
+const char *password = "password123";
 
 void setup() {
   Serial.begin(115200);
 
-  // Start WiFi in Access Point mode
+  // Start WiFi Access Point
   WiFi.softAP(ssid, password);
   Serial.println("AP started at: " + WiFi.softAPIP().toString());
 
@@ -33,10 +33,9 @@ void setup() {
   // Enable OTA updates at /update
   ota.begin();
 
-  // Start the server
+  // Start the server to accept connections
   server.begin();
 }
 
 void loop() {
-
 }
